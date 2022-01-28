@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Census_Analyzer_Program", "Census_Analyzer_Program.csproj", "{B1F61D50-4490-4B3A-A2F6-3E036A8FB906}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1F61D50-4490-4B3A-A2F6-3E036A8FB906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F61D50-4490-4B3A-A2F6-3E036A8FB906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F61D50-4490-4B3A-A2F6-3E036A8FB906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F61D50-4490-4B3A-A2F6-3E036A8FB906}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {979E2142-E12E-4FA2-A37A-293D01FD968F}
+	EndGlobalSection
+EndGlobal
