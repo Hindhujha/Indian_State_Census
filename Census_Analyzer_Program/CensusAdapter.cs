@@ -9,7 +9,7 @@ namespace Census_Analyzer_Program
     public abstract class CensusAdapter
     {
 
-        protected string[] GetCensusData(string csvFilePath,string dataHeaders)
+        public string[] GetCensusData(string csvFilePath,string dataHeaders)
         {
             string[] censusData;
             if(!File.Exists(csvFilePath))
