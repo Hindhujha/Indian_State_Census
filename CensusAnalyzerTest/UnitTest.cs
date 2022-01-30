@@ -19,6 +19,7 @@ namespace CensusAnalyzerTest
         static string wrongIndianStateCensusFileType= @"D:\BridgeLabz\Indian_State_Census\CensusAnalyzerTest\CSVFiles\IndiaStateCensusDatas.txt";
         static string indianStateCodeFilePath = @"D:\BridgeLabz\Indian_State_Census\CensusAnalyzerTest\CSVFiles\IndiaStateCode.csv";
         static string wrongIndianStateCodeFileType= @"D:\BridgeLabz\Indian_State_Census\CensusAnalyzerTest\CSVFiles\IndiaStateCodes.csv";
+        static string delimiterIndianStateCodeFilePath = @"D:\BridgeLabz\Indian_State_Census\CensusAnalyzerTest\CSVFiles\DelimiterIndiaStateCensusData.csv";
 
         Census_Analyzer_Program.CensusAnalyser censusAnalyser;
         Dictionary<string, CensusDTO> totalRecord;
@@ -63,6 +64,18 @@ namespace CensusAnalyzerTest
             Assert.AreEqual(CensusAnalyserException.ExceptionType.FILE_NOT_FOUND, censusException.eType);
             Assert.AreEqual(CensusAnalyserException.ExceptionType.FILE_NOT_FOUND, stateException.eType);
         }
+
+        [Test]
+        public void GivenIndianCensusDataFile_WhenDelimiterNotProper_ShouldReturnException()
+        {
+            var censusException = Assert.Throws<CensusAnalyserException>(
+                () => censusAnalyser.LoadCensusData(CensusAnalyser.Country.INDIA, delimiterIndianCensusFilePath, indianStateCensusHeaders));
+
+            var stateException = Assert.Throws<CensusAnalyserException>(() => censusAnalyser.LoadCensusData(CensusAnalyser.Country.INDIA, delimiterIndianStateCodeFilePath, indianStateCodeHeaders));
+            Assert.AreEqual(CensusAnalyserException.ExceptionType.FILE_NOT_FOUND, censusException.eType);
+            Assert.AreEqual(CensusAnalyserException.ExceptionType.FILE_NOT_FOUND, stateException.eType);
+        }
+
     }
 }
 
